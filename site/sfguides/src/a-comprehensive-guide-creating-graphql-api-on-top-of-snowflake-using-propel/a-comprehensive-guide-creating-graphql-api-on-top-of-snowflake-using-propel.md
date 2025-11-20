@@ -2,7 +2,7 @@ author: YK
 id: a-comprehensive-guide-creating-graphql-api-on-top-of-snowflake-using-propel
 categories: snowflake-site:taxonomy/solution-center/certification/quickstart, snowflake-site:taxonomy/product/platform, snowflake-site:taxonomy/snowflake-feature/external-collaboration
 language: en
-summary: This guide teaches how to create a GraphQL API using Propel on Snowflake, focusing on setup, configuration, and development of a high-performance API.
+summary: This guide teaches you how to create a GraphQL API using Propel on Snowflake, focusing on setup, configuration, and development of a high-performance API.
 environments: web
 status: Published 
 feedback link: https://github.com/Snowflake-Labs/sfguides/issues
