@@ -12,6 +12,8 @@ author:  Snowflake DevRel Team
 
 The following sections explain the various headings of a guide that are required to keep the look and feel consistent.
 
+Your guide will reside in this [sfguides/src folder](https://github.com/Snowflake-Labs/sfquickstarts/tree/master/site/sfguides/src)
+
 ### Overview 
 
 Please use [this markdown file](https://github.com/Snowflake-Labs/sfquickstarts/tree/master/site/sfguides/src/_markdown-template) as a template for writing your own Snowflake Guides. This example guide has elements that you will use when writing your own guides, including: code snippet highlighting, downloading files, inserting photos, and more. 
@@ -47,6 +49,7 @@ These steps are defined in Markdown using Header 2 tag `##`. Sub-steps will use 
 It is important to include on the first page of your guide the following sections: Prerequisites, What you'll learn, What you'll need, and What you'll build.
 Remember, part of the purpose of a Snowflake Guide is that the reader will have **built** something by the end of the tutorial;
 this means that actual code needs to be included (not just pseudo-code or concepts).
+
 
 ### Prerequisites
 Include the basic requirements to get started in this subtopic
@@ -85,31 +88,35 @@ It is important to set the correct metadata for your Snowflake Guide. The metada
 
 **REQUIRED FIELDS**
 
-- **id**: sample-separated-by-hyphens-not-underscores 
-  - Make sure to match the id here with the name of the file, all one word.
-- **language**: pick from list 
-  - Pick the appropriate language from the list provided.  
-- **categories**: Pick from the list
+- **id**: 
+  - the id should be separated by hyphens, not underscores
+  - Make sure to match the id here with the name of the file, all one word
+- **language**: 
+  - Pick the appropriate language from the list provided 
+- **categories**: 
   - Select from the complete list of content type categories, categories 1, 2 and 3 and/or industries categories provided.  Please DO NOT create new categories.
-- **status**: (`Published`, `Archived`)<br>
+- **status**: 
   - `Published` - implies the guide is active<br>
   - `Archived` - implies the sfguide is out of date and deprecated and no longer available<br>
   - Please note the `hidden` status will no longer be supported. If a content piece is not ready for publication, please keep this in draft form until you are ready to make this live. 
-- **authors**: Author Full Name (+ author GitHub account)
-  - Indicate the author(s) of this specific sfguide.  Including the GitHub Account login helps us notify you of any changes requested in the future.
+- **authors**:
+  - Provide author full name (+ author GitHub account). Multiple authors can be added
+  - Including the GitHub Account login helps us notify you of any changes requested in the future.
 
 **OPTIONAL FIELDS**
 
-  - **summary**: This is a sample Snowflake Guide 
+  - **summary**: 
     - This should be a short, 1 sentence description of your guide. This will be visible on the main landing page. 
   - **environments**: web 
     - `web` is the default. If this will be published at a specific event or conference, include it here.
   - **feedback link**: https://github.com/Snowflake-Labs/sfguides/issues
-  - **fork repo link**: add a link to your repo
-  - **open in snowflake**: add a link to the product as a deeplink or a template link
+  - **fork repo link**:
+    - add a link to your repo
+  - **open in snowflake**:
+    - add a link to the product as a deeplink or a template link
 
 
-You can see the source metadata at the top of the markdown for this guide [here](https://github.com/Snowflake-Labs/sfquickstarts/blob/master/site/sfguides/src/get-started-with-guides/get-started-with-guides.md) for reference.
+You can see the source metadata at the top of the markdown for this guide [here](https://github.com/Snowflake-Labs/sfquickstarts/blob/master/site/sfguides/src/get-started-with-guides/get-started-with-guides.md?plain=1) for reference.
 
 
 
@@ -134,8 +141,8 @@ Sticking to these guidelines ensures that all Guides have a similar look and fee
 
 ### Adding Tables
 
-```
 Code for adding tables:
+```
 
 | Column 1 | Column 2 | Column 3 |
 |-----------|-----------|-----------|
@@ -159,42 +166,29 @@ Images should:
 - Sizes should be 1 MB max file size, gifs are an exception but they should also be optimized - large images will slow down the page load
 - Please add images and tables in Markdown format, not HTML
 
-
-```
 Code for adding images:
 
+```
 ![text of your choice](path within sfguide repo "assets" subfolder where image has been uploaded)
 
 Sample URL: ![puppy](https://github.com/Snowflake-Labs/sfquickstarts/blob/master/site/sfguides/src/get-started-with-guides/assets/puppy.jpg)
-
 ```
 
 
 ### Hyperlinking
-
-```
 Code for hyperlinking:
 
+```
 ![Link Title](Link URL)
 ```
 
 
 ### Adding Videos
-
-```
 Code for adding videos:
 
+```
 [this video](https://www.youtube.com/watch?v=KmeiFXrZucE)
 ```
-
-#### Buttons
-
-<button>[Youtube - Halsey Playlists](https://www.youtube.com/user/iamhalsey/playlists)</button>
-
-CODE:
-```
-<button>[Youtube - Halsey Playlists](https://www.youtube.com/user/iamhalsey/playlists)</button>
-
 
 <!-- ------------------------ -->
 
@@ -232,7 +226,7 @@ Select the taxonomy path from the list below and add to the "category" field at 
 
 
 
-#### Category Tagging
+### Category Tagging
 
 >NOTE:
 >Please pick applicable categories from the tables below. Not all 3 categories are not required. The taxonomy path is input into the "tags" field and multiple tags are separated by commas. **Do not create new tags if you don't see them in the list**<br>
@@ -325,48 +319,6 @@ Select the taxonomy path from the list below and add to the "category" field at 
 | Transportation | snowflake-site:taxonomy/industry/transportation |
 | Travel and Hospitality | snowflake-site:taxonomy/industry/travel-and-hospitality |
 
-#### Adding Colors
-
-Basic colors can be  added to callouts using "diff" in a code block in between "```".  
-
-
-```
-
--- Code for adding colored text:
-
-```diff
-- at the start adds text in red
-+ at the start adds text in green
-# at the start adds text in white```
-
-``` 
-
-#### Additional Languages Supported in Markdown
-
-```
-Adding code in javascript:
-
-javascript
-{ 
-  key1: "string", 
-  key2: integer,
-  key3: "string"
-}
-```
-
-```
-Adding code in java:
-
-java
-for (statement 1; statement 2; statement 3) {
-  // code block to be executed
-}
-```
-
-#### Info Boxes 
-
-For any callouts within the content you can use the following code options: [!NOTE] , [!TIP] , [!IMPORTANT]
-
 
 <!-- ------------------------ -->
 
@@ -379,12 +331,6 @@ To convert a Word document (.docx) to Markdown using Pandoc:
 
 
 You can also use the Google Docs feature of saving to Markdown, however **please review your markdown before submission as some formatting options can be different.** In some instances Google Docs may add additional spacing during conversion that will cause markdown errors. 
-
-
-
-
-
-
 
 
 <!-- ------------------------ -->
@@ -429,12 +375,3 @@ You can also use the Google Docs feature of saving to Markdown, however **please
 - Video on [How to Fork a Repo](https://youtu.be/ePRJHFXU6n4)
 - [Markdown template that can be used](https://github.com/Snowflake-Labs/sfquickstarts/tree/master/site/sfguides/src/_markdown-template).
 - Video on [How to Edit a Guide](https://youtu.be/yd9LXsvTSTU)
-
-### Sample Existing Guides:
-
-You can do one of the following types of Guides.  Each one has a different layout and end user journey.
-* **Logged Out experience with one click into Product Template:** [Understanding Customer Reviews using Snowflake Cortex](https://www.snowflake.com/en/developers/guides/understanding-customer-reviews-using-snowflake-cortex/)
-* **Topic pages with multiple use cases below the Overview:** [Data Connectivity with Snowflake Openflow](https://www.snowflake.com/en/developers/guides/data-connectivity-with-snowflake-openflow/)
-* **Basic Guide with hands-on Instructions:** [Getting Started with Snowflake Intelligence](https://www.snowflake.com/en/developers/guides/getting-started-with-snowflake-intelligence/)
-
-
